@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+    <display-name>bus_task</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+    </welcome-file-list>
+    <filter>
+        <display-name>EncodingFilter</display-name>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.task.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <description></description>
+        <display-name>LoginServlet</display-name>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.task.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <description></description>
+        <display-name>AdminServlet</display-name>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>com.task.servlet.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>ClassesServlet</display-name>
+        <servlet-name>ClassesServlet</servlet-name>
+        <servlet-class>com.task.servlet.ClassesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClassesServlet</servlet-name>
+        <url-pattern>/ClassesServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>StudentServlet</display-name>
+        <servlet-name>StudentServlet</servlet-name>
+        <servlet-class>com.task.servlet.StudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentServlet</servlet-name>
+        <url-pattern>/StudentServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>TeacherServlet</display-name>
+        <servlet-name>TeacherServlet</servlet-name>
+        <servlet-class>com.task.servlet.TeacherServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TeacherServlet</servlet-name>
+        <url-pattern>/TeacherServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <description></description>
+        <display-name>BoardServlet</display-name>
+        <servlet-name>BoardServlet</servlet-name>
+        <servlet-class>com.task.servlet.BoardServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BoardServlet</servlet-name>
+        <url-pattern>/BoardServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <description></description>
+        <display-name>MaterialServlet</display-name>
+        <servlet-name>MaterialServlet</servlet-name>
+        <servlet-class>com.task.servlet.MaterialServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MaterialServlet</servlet-name>
+        <url-pattern>/MaterialServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>MessageServlet</display-name>
+        <servlet-name>MessageServlet</servlet-name>
+        <servlet-class>com.task.servlet.MessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MessageServlet</servlet-name>
+        <url-pattern>/MessageServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>WorkServlet</display-name>
+        <servlet-name>WorkServlet</servlet-name>
+        <servlet-class>com.task.servlet.WorkServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WorkServlet</servlet-name>
+        <url-pattern>/WorkServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <description></description>
+        <display-name>XszyServlet</display-name>
+        <servlet-name>XszyServlet</servlet-name>
+        <servlet-class>com.task.servlet.XszyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>XszyServlet</servlet-name>
+        <url-pattern>/XszyServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+
+</web-app>
