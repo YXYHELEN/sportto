@@ -8,6 +8,37 @@ public class Work {
 	private String	times;
 	private Integer tid;
 	private Teacher teacher;
+
+
+	public Integer getIstest() {
+		return istest;
+	}
+
+	public void setIstest(Integer istest) {
+		this.istest = istest;
+	}
+
+	private Integer istest;
+
+	public Integer getNumber() {
+		return number;
+	}
+
+	public void setNumber(Integer number) {
+		this.number = number;
+	}
+
+	private Integer number;
+	public float getTime() {
+		return time;
+	}
+
+	public void setTime(float time) {
+		this.time = time;
+	}
+
+	private float time;
+
 	public Integer getId() {
 		return id;
 	}

@@ -50,13 +50,52 @@
                             <div class="card-body">
                                 <div class="basic-form">
                                     <form id="saveForm" enctype="multipart/form-data">
-                                            <div class="mb-3">
-                                                <label class="form-label">作业主题</label>
-                                                <input type="text" name="title" class="form-control" >
-                                            </div>
-                                        
-                                          <div class="mb-3">
-                                                <label class="form-label">上传资料</label>
+                                        <div class="mb-3">
+                                            <label class="form-label">选择作业类型</label>
+                                            <select class="default-select form-control wide" name="title" id="titleSelect" onchange="handleSelectChange()">
+                                                <option value="仰卧起坐">仰卧起坐</option>
+                                                <option value="引体向上">引体向上</option>
+                                                <option value="立定跳远">立定跳远</option>
+                                                <option value="日常锻炼">日常锻炼</option>
+                                                <option value="其他">其他</option>
+                                            </select>
+                                        </div>
+                                        <div id="customTitleDiv" class="mb-3" style="display: none;">
+                                            <label class="form-label">自定义作业类型</label>
+                                            <input type="text" class="form-control" name="customTitle" id="customTitle">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">是否为体测</label>
+                                            <select class="default-select  form-control wide" name="istest" >
+                                                <option value="1">是</option>
+                                                <option value="0">否</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="selection">是否有个数需求？</label>
+                                            <select id="selection" name="selection" class="form-control" onchange="toggleNumberInput()">
+                                                <option value="unlimited">不限个数</option>
+                                                <option value="numberRequired">个数需求</option>
+                                            </select>
+                                        </div>
+                                        <div id="numberInput" style="display: none;">
+                                            <label for="num">要求个数</label>
+                                            <input type="number" id="num" name="number" class="form-control" value="0"> <!-- 注意这里添加了 id="num" 并且 name 改为了 "num" -->
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="selection">是否有时长需求？</label>
+                                            <select id="selection2" name="selection2" class="form-control" onchange="toggleNumberInput()">
+                                                <option value="unlimited">不限时长</option>
+                                                <option value="timeRequired">个数时长</option>
+                                            </select>
+                                        </div>
+                                        <div id="timeInput" style="display: none;">
+                                            <label for="num">要求时长（单位：小时）</label>
+                                            <input type="text" id="time" name="time" class="form-control" value="0"> <!-- 注意这里添加了 id="num" 并且 name 改为了 "num" -->
+                                        </div>
+
+                                        <div class="mb-3">
+                                                <label class="form-label">上传视频资料</label>
                                                 <input type="file" name="file" class="form-control" >
                                             </div>
                                         
@@ -112,8 +151,37 @@
 	    document.getElementById("photo").src=img_src;
 	});
 </script>
-   
-   
+   <script type="text/javascript">
+       function toggleNumberInput() {
+           // 获取下拉菜单的值
+           var selection = document.getElementById("selection").value;
+           // 根据选择显示或隐藏number输入框
+           if (selection == "numberRequired") {
+               document.getElementById("numberInput").style.display = "block";
+           } else {
+               document.getElementById("numberInput").style.display = "none";
+           }
+           var selection2 = document.getElementById("selection2").value;
+           // 根据选择显示或隐藏number输入框
+           if (selection2 == "timeRequired") {
+               document.getElementById("timeInput").style.display = "block";
+           } else {
+               document.getElementById("timeInput").style.display = "none";
+           }
+       }
+   </script>
+   <script>
+       function handleSelectChange() {
+           var titleSelect = document.getElementById("titleSelect");
+           var selectedValue = titleSelect.value;
+           var customTitleDiv = document.getElementById("customTitleDiv");
+           if(selectedValue === "其他") {
+               customTitleDiv.style.display = "block";
+           } else {
+               customTitleDiv.style.display = "none";
+           }
+       }
+   </script>
    
 </body>
 </html>
