@@ -11,6 +11,16 @@ public class Work {
 	private float time;
 	private Integer number;
 	private Teacher teacher;
+
+	public String getCid() {
+		return cid;
+	}
+
+	public void setCid(String cid) {
+		this.cid = cid;
+	}
+
+	private String cid;
 	public Integer getId() {
 		return id;
 	}

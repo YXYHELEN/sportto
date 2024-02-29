@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
+import com.task.entity.Teacher;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
@@ -56,8 +57,11 @@ public class ClassesDao {
 		// TODO Auto-generated method stub
 		try {
 			// 执行插入sql
-			runner.update("insert into Classes(name) values (?)",
-					Classes.getName());
+			Teacher teacher=runner.query("select * from teacher where tno=? ", new BeanHandler<Teacher>(Teacher.class),
+					Classes.getTid());
+			String tname=teacher.getName();
+			runner.update("insert into Classes(name,tid,tname) values (?,?,?)",
+					Classes.getName(),Classes.getTid(),tname);
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}

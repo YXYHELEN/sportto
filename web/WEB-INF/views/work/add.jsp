@@ -93,7 +93,10 @@
                                             <label for="num">要求时长（单位：小时）</label>
                                             <input type="text" id="time" name="time" class="form-control" value="0"> <!-- 注意这里添加了 id="num" 并且 name 改为了 "num" -->
                                         </div>
-
+                                        <div class="mb-3">
+                                            <label for="cid">发布班级ID</label>
+                                            <input type="text" id="cid" name="cid" class="form-control" value="0"> <!-- 注意这里添加了 id="num" 并且 name 改为了 "num" -->
+                                        </div>
                                         <div class="mb-3">
                                                 <label class="form-label">上传视频资料</label>
                                                 <input type="file" name="file" class="form-control" >

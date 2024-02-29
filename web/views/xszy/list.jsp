@@ -17,8 +17,8 @@
 	<meta name="description" content="Fillow : Fillow Saas Admin  Bootstrap 5 Template" />
 	<meta name="format-detection" content="telephone=no">
 	
-	<title>作业管理系统</title>
-	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+	<title>SPORTTO智慧体育</title>
+	<link rel="shortcut icon" type="image/png" href="images/logo.png" />
 	<link href="resource/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link href="resource/css/style.css" rel="stylesheet">
 

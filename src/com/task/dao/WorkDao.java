@@ -56,8 +56,8 @@ public class WorkDao {
 		// TODO Auto-generated method stub
 		try {
 			// 执行插入sql
-			runner.update("insert into Work(title,url,times,tid,time,test,number) values (?,?,?,?,?,?,?)",
-					Work.getTitle(),Work.getUrl(),Work.getTimes(),Work.getTid(),Work.getTime(),Work.getTest(),Work.getNumber());
+			runner.update("insert into Work(title,url,times,tid,time,test,number,cid) values (?,?,?,?,?,?,?,?)",
+					Work.getTitle(),Work.getUrl(),Work.getTimes(),Work.getTid(),Work.getTime(),Work.getTest(),Work.getNumber(),Integer.parseInt(Work.getCid()));
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
 		}

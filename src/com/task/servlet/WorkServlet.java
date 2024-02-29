@@ -99,6 +99,7 @@ public class WorkServlet extends BaseServlet {
 					String name = item.getFieldName();
 					String value = item.getString("UTF-8");
 					BeanUtils.setProperty(ss, name, value);
+					System.out.println(name+","+value);
 				} else {
 					String filename = item.getName();
 					String savefilename = makeFileName(filename);

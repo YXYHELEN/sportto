@@ -58,7 +58,8 @@
                                     <table class="table table-bordered table-responsive-md" >
                                         <thead> 
                                             <tr>
-                                                <th><strong>班级名称</strong></th> 
+                                                <th><strong>班级名称</strong></th>
+                                                <th><strong>授课教师</strong></th>
                                                 <th><strong>操作</strong></th>
                                             </tr>
                                         </thead>
@@ -66,6 +67,7 @@
                                         	<c:forEach items="${list}" var="data">
                                             <tr>
                                                 <td>${data.name }</td>
+                                                <td>${data.tname}</td>
                                                 <td>
 													<div class="d-flex">
 														<a href="ClassesServlet?action=toUpdateClasses&id=${data.id }" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>

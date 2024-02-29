@@ -45,19 +45,25 @@
 					<div class="col-xl-12 col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">新增班级</h4>
+                                <h4 class="card-title">作业提交</h4>
                             </div>
                             <div class="card-body">
                                 <div class="basic-form">
-                                    <form id="saveForm">
-                                            <div class="mb-3">
-                                                <label class="form-label">班级名称</label>
-                                                <input type="text" name="name" class="form-control" >
+                                    <form id="saveForm" enctype="multipart/form-data">
+                                             <div class="mb-3">
+		                                            <label class="form-label">请选择作业:</label>
+		                                            <select class="default-select  form-control wide" name="wid" >
+		                                                <c:forEach items="${workList}" var="data">
+		                                                   <option value="${data.id }">${data.title}</option>
+		                                                </c:forEach>
+		                                            </select>
+		                                        </div> 
+                                        
+                                          <div class="mb-3">
+                                                <label class="form-label">上传作业</label>
+                                                <input type="file" name="file" class="form-control" >
                                             </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">授课教师id</label>
-                                            <input type="text" name="tid" class="form-control" >
-                                        </div>
+                                        
                                         
                                             <button type="button" id="save" class="btn btn-primary mt-3">提交</button>
                                     </form>
@@ -87,15 +93,18 @@
 		 $.ajax({
 			cache:true,
 			type : "post",
-			url : "ClassesServlet?action=addClasses",
-			data : $("#saveForm").serialize(),
+			url : "XszyServlet?action=addXszy",
+			 data : new FormData($('#saveForm')[0]),
+			 processData: false,
+			 contentType: false,
+			//data : $("#saveForm").serialize(),
 			async:false,
 			success : function(e) {
 				if (e == "yes") {
-					alert("新增成功！");
-					window.location.href = "ClassesServlet?action=ClassesList";
+					alert("提交成功！");
+					window.location.href = "XszyServlet?action=XszyList";
 				}else{
-					alert("新增失败");
+					alert("提交失败");
 				}
 			}
 		})
