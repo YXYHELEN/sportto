@@ -88,6 +88,9 @@ public class WorkServlet extends BaseServlet {
 	private Work fileUpload(HttpServletRequest request) {
 		Work ss = new Work();
 		try {
+			String time;
+			String test="";
+			String number;
 			DiskFileItemFactory factory = new DiskFileItemFactory();
 			ServletFileUpload upload = new ServletFileUpload(factory);
 			List<FileItem> list = upload.parseRequest(request);

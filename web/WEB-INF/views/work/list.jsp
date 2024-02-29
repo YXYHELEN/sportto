@@ -58,10 +58,13 @@
                                     <table class="table table-bordered table-responsive-md" >
                                         <thead> 
                                             <tr>
-                                                <th><strong>作业主题</strong></th> 
+                                                <th><strong>作业标题</strong></th>
                                                 <th><strong>下载资料</strong></th> 
                                                 <th><strong>发布时间</strong></th> 
-                                                <th><strong>发布教师</strong></th> 
+                                                <th><strong>发布教师</strong></th>
+                                                <th><strong>是否为体测</strong></th>
+                                                <th><strong>个数要求</strong></th>
+                                                <th><strong>时长要求</strong></th>
                                                 <th><strong>操作</strong></th>
                                             </tr>
                                         </thead>
@@ -72,6 +75,9 @@
                                                 <td><a style="color:red" href="WorkServlet?action=downLoad&url=${data.url }">点击下载</a></td>
                                                 <td>${data.times }</td>
                                                 <td>${data.teacher.name }</td>
+                                                <td>${data.test == "no" ? "否" : "是"}</td>
+                                                <td>${data.number == null ? "不限个数" : data.number}</td>
+                                                <td>${data.time == 0.0 ? "不限时长" : data.time}</td>
                                                 <td>
 													<div class="d-flex">
 													 <c:if test="${admin!=null || teacher!=null }">

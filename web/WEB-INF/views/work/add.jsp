@@ -60,15 +60,15 @@
                                                 <option value="其他">其他</option>
                                             </select>
                                         </div>
-                                        <div id="customTitleDiv" class="mb-3" style="display: none;">
-                                            <label class="form-label">自定义作业类型</label>
-                                            <input type="text" class="form-control" name="customTitle" id="customTitle">
-                                        </div>
+<%--                                        <div id="customTitleDiv" class="mb-3" style="display: none;">--%>
+<%--                                            <label class="form-label">自定义作业类型</label>--%>
+<%--                                            <input type="text" class="form-control" name="customTitle" id="customTitle">--%>
+<%--                                        </div>--%>
                                         <div class="mb-3">
                                             <label class="form-label">是否为体测</label>
-                                            <select class="default-select  form-control wide" name="istest" >
-                                                <option value="1">是</option>
-                                                <option value="0">否</option>
+                                            <select class="default-select  form-control wide" name="test" value="yes">
+                                                <option value="yes">是</option>
+                                                <option value="no">否</option>
                                             </select>
                                         </div>
                                         <div class="mb-3">
